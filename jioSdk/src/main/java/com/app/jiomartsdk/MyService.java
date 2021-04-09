@@ -25,6 +25,7 @@ import java.util.Objects;
 import java.util.Random;
 
 import static com.app.jiomartsdk.JioMartActivity.eventTriggered;
+import static com.app.jiomartsdk.JioService.eventTriggeredd;
 
 public class MyService extends Service implements SpeechDelegate, Speech.stopDueToDelay {
 
@@ -106,8 +107,8 @@ public class MyService extends Service implements SpeechDelegate, Speech.stopDue
       muteBeepSoundOfRecorder();
       if(result.equalsIgnoreCase("Hello Jio mart"))
       {
-        eventTriggered.onTriggered();
-        Toast.makeText(this, "Jio Mart executive is listening to you.", Toast.LENGTH_SHORT).show();
+        eventTriggeredd.onTriggered();
+
       }
 
        //Speech.getInstance().stopListening();
